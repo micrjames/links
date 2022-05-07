@@ -1,0 +1,82 @@
+@import './scss/button', './scss/config', './scss/res-mq';
+
+main {
+   .content-container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  .content-image {
+		 	margin-top: 1.5rem;
+			width: 125px;
+			height: 125px;
+			border-radius: 25%;
+			@include md {
+			   width: 175px;
+			   height: 175px;
+			}
+	  }
+	  .description {
+		 	font-size: 1.15rem;
+			margin: 1.25rem 4.75rem 0 4.75rem;
+			@include xs {
+			   margin: 1.25rem 2.75rem 0 1.75rem;
+			}
+			@include md {
+			   font-size: 1.75rem;
+			}
+	  }
+	  .section-header {
+		 align-self: flex-start;
+		 font-size: 1.25rem;
+		 margin-left: 4.5rem;
+		 display: flex;
+		 align-items: center;
+		 @include xs {
+			margin-left: 2.5rem;
+		 }
+		 @include md {
+			font-size: 1.75rem;
+		 }
+		 @include xl {
+			margin-left: 3.5rem;
+		 }
+	  }
+	  .btn {
+			@include button(1.15rem, 1rem 7.75rem, 1rem);		 	
+			@include box-shadow(.25rem, .75rem, 1rem, 0.15rem, #000, 0);
+			@include transition-ease;
+			&:active {
+			   	box-shadow: none;
+				transform: scale(0.98);
+			}
+			@include xs {
+			   @include button(1.15rem, 1rem 5.75rem, 1rem);		 	
+			}
+			@include md {
+			   @include button(1.75rem, 1rem 8.75rem, 1rem);		 	
+			}
+	  }
+	  .slate {
+			background: #3c3c3c;
+	  }
+	  @include xl {
+		 padding: 10rem;
+		 padding-top: 0;
+	  }
+   }
+}
+footer {
+   display: flex;
+   justify-content: flex-end;
+   width: 100vw;
+   margin: 2rem 0;
+   .footer-content__signature {
+	  margin-right: 2rem;
+	  @include xs {
+		 font-size: .85rem;
+	  }
+	  @include md {
+		 font-size: 1.5rem;
+	  }
+   }
+}
